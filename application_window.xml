@@ -1,0 +1,5 @@
+<interface>
+    <template class="ApplicationWindow" parent="GtkApplicationWindow">
+        <property name="title">Editor</property>
+    </template>
+</interface>
