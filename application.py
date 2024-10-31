@@ -1,7 +1,7 @@
-from gi.repository import Gtk, Gio
+from gi.repository import Adw, Gio
 from application_window import ApplicationWindow
 
-class Application(Gtk.Application):
+class Application(Adw.Application):
     def __init__(self):
         super().__init__()
         self.add_actions()

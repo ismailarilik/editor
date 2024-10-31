@@ -1,9 +1,17 @@
 <interface>
-    <template class="ApplicationWindow" parent="GtkApplicationWindow">
+    <template class="ApplicationWindow" parent="AdwApplicationWindow">
         <property name="title">Editor</property>
 
-        <child>
-            <object class="GtkTextView"></object>
-        </child>
+        <property name="content">
+            <object class="AdwToolbarView">
+                <child type="top">
+                    <object class="AdwHeaderBar"></object>
+                </child>
+
+                <property name="content">
+                    <object class="GtkTextView"></object>
+                </property>
+            </object>
+        </property>
     </template>
 </interface>
