@@ -1,5 +1,9 @@
 <interface>
     <template class="ApplicationWindow" parent="GtkApplicationWindow">
         <property name="title">Editor</property>
+
+        <child>
+            <object class="GtkTextView"></object>
+        </child>
     </template>
 </interface>
