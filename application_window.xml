@@ -1,6 +1,8 @@
 <interface>
     <template class="ApplicationWindow" parent="AdwApplicationWindow">
         <property name="title">Editor</property>
+        <property name="default-width">960</property>
+        <property name="default-height">540</property>
 
         <property name="content">
             <object class="AdwToolbarView">
@@ -9,7 +11,30 @@
                 </child>
 
                 <property name="content">
-                    <object class="GtkTextView"></object>
+                    <object class="AdwToastOverlay" id="toast_overlay">
+                        <property name="child">
+                            <object class="GtkScrolledWindow">
+                                <property name="hexpand">true</property>
+                                <property name="vexpand">true</property>
+                                <property name="margin-top">6</property>
+                                <property name="margin-bottom">6</property>
+                                <property name="margin-start">6</property>
+                                <property name="margin-end">6</property>
+
+                                <property name="child">
+                                    <object class="GtkPaned">
+                                        <child>
+                                            <object class="GtkTreeView" id="tree_view">
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="Notebook" id="notebook"></object>
+                                        </child>
+                                    </object>
+                                </property>
+                            </object>
+                        </property>
+                    </object>
                 </property>
             </object>
         </property>
