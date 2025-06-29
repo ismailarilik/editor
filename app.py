@@ -24,6 +24,12 @@ class App(Gtk.Application):
     def set_accels_for_app_actions(self):
         self.set_accels_for_action("app.quit", ["<primary>q"])
 
+    def set_accels_for_win_actions(self):
+        self.set_accels_for_action("win.new-file", ["<primary>n"])
+        self.set_accels_for_action("win.open-file", ["<primary>o"])
+        self.set_accels_for_action("win.save", ["<primary>s"])
+        self.set_accels_for_action("win.save-as", ["<primary><shift>s"])
+
     def on_quit(self, *_):
         self.quit()
 
