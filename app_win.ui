@@ -1,0 +1,16 @@
+<interface>
+  <template class="AppWin" parent="GtkApplicationWindow">
+    <property name="title">Editor</property>
+
+    <child>
+      <object class="GtkPaned">
+        <child>
+          <object class="GtkTreeView" id="tree_view"></object>
+        </child>
+        <child>
+          <object class="GtkNotebook" id="notebook"></object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
